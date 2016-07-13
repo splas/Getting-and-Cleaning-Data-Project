@@ -77,4 +77,4 @@ FinalTidyData<- TidyData[,-(1:2),drop=FALSE]
 tidyData    = merge(FinalTidyData, activityType,by='activityId',all.x=TRUE);
 
 # Export the tidyData set 
-write.table(TidyData, './TidyData.txt',row.names = FALSE, quote = FALSE)
+write.table(tidyData, './TidyData.txt',row.names = FALSE, quote = FALSE)
