@@ -74,7 +74,7 @@ TidyData    = aggregate(FinalDataNoActType,
 FinalTidyData<- TidyData[,-(1:2),drop=FALSE]
 
 # ReMerging the tidyData with activityType to include descriptive acitvity names
-tidyData    = merge(FinalTidyData, activityType,by='activityId',all.x=TRUE);
+tidyData    = merge(FinalTidyData, actlabels,by='activityId',all.x=TRUE);
 
 # Export the tidyData set 
 write.table(tidyData, './TidyData.txt',row.names = FALSE, quote = FALSE)
